@@ -1,0 +1,245 @@
+<html>
+<head>
+	<title>七海动态</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		font-family: Microsoft YaHei;
+		list-style: none;
+		text-decoration: none;
+		letter-spacing: 2px;
+	    -webkit-font-smoothing: antialiased;
+  		-moz-osx-font-smoothing: grayscale;
+	}
+	.main_value_detail{
+		min-height: 96.5%;
+		background: #f0f0f0;
+	}
+	.container{
+		padding: 10rem 5rem 5rem;
+		background: #fff;
+	}
+	.container .back_btn{
+    	position: relative;
+    	float: right;
+		text-align: center;
+		color: #666;
+		font-size: 0.875rem;
+		border: 1px solid #666;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		height: 2.5rem;
+		line-height: 2.5rem;
+		width: 10rem;
+		right: 0;
+		overflow: hidden;
+	}
+	.container .right .back_btn .layer_black{
+		position:absolute;
+		display: none;
+		top: -5rem;
+		left:-1.25rem;
+		height:12.5rem;
+		width: 12.5rem;
+		border:1.25rem solid rgba(0,0,0,.8); 
+		border-radius: 50%;
+		-weibit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		animation:layer_black 0.5s;
+		-webkit-animation:layer_black 0.5s;
+		-moz-animation:layer_black 0.5s;
+	}
+	@-webkit-keyframes layer_black{
+		from{
+			top: 0;
+			left: 3.75rem;
+			height:0;
+			width: 0;
+		}
+		to{
+			top: -5rem;
+			left:-1.25rem;
+			height:12.5rem;
+			width: 12.5rem;
+		}
+	}@-moz-keyframes layer_black{
+		from{
+			top: 0;
+			left: 3.75rem;
+			height:0;
+			width: 0;
+		}
+		to{
+			top: -5rem;
+			left:-1.25rem;
+			height:12.5rem;
+			width: 12.5rem;
+		}
+	}@keyframes layer_black{
+		from{
+			top: 0;
+			left: 3.75rem;
+			height:0;
+			width: 0;
+		}
+		to{
+			top: -5rem;
+			left:-1.25rem;
+			height:12.5rem;
+			width: 12.5rem;
+		}
+	}
+	.container .head{
+		height: 12rem;
+		padding-top: 4rem;
+	}
+	.container .head .left{
+		text-align: center;
+		line-height: 8rem;
+		font-size: 1.8rem;
+		font-weight: bold;
+		color: #fff;
+		background-color: #0FABF9;
+	}
+	.container .head .right{
+		padding-left: 0;
+	}
+	.container .head .right img{
+		width: 100%;
+		height: 100%;
+		object-fit:cover;
+	} 
+    .container .tab .left{
+    	background: #36A1E0;
+    }
+ 	.container .tab .left ul{
+ 		margin: 0;
+ 	}
+    .container .tab .left ul li{
+    	position: relative;
+    	font-size: 1rem;
+    	color: #ddd;
+    	border-bottom: 1px solid #ddd;
+    	padding: 1rem 2rem;
+    	text-align: left;
+    	letter-spacing: 1px;
+    	cursor: pointer;
+    }
+    .container .tab .left ul li:first-child .triangle{
+    	display: block;
+    }
+    .container .tab .left ul li:last-child{
+    	border:none;
+    }
+    .container .tab .left ul li .triangle{
+    	position: absolute;
+    	display: none;
+    	right: -1.8rem;
+    	top: 60%;
+    	border-left:1rem solid #36A1E0;
+    	border-top:.5rem solid transparent;
+    	border-bottom:.5rem solid transparent;
+    }
+    .container .tab .cnt{
+    	display: none;
+    	padding: 4rem 1rem;
+    	color: #999;
+    }
+    .container .tab .cnt:first-child{
+    	display: block;
+    }
+	.foot{
+		padding:0.48rem 0; 
+		width: 100%;
+		background: #000;
+		text-align: center;
+		font-size: 0.8rem;
+		letter-spacing: 2px;
+		color:#999;
+	}
+</style>
+<body>
+	<div class="main_value_detail">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<a href="page_value.html?1" class="back_btn">返回上一页</a>
+				</div>
+			</div>
+			<div class="row head">
+				<div class="col-md-3 left">宗旨</div>
+				<div class="col-md-9 right">
+					<img src="img/qihai84.png">
+				</div>
+			</div>
+			<div class="row tab">
+				<div class="col-md-3 left">
+					<ul>
+						<li>
+							为什么要投资和连接中美科技创新?
+							<span class="triangle"></span>
+						</li>
+						<li>
+							七海价值主张
+							<span class="triangle"></span>
+						</li>
+						<li>
+							七海投资理念
+							<span class="triangle"></span>
+						</li>
+						<li>
+							七海资本定位
+							<span class="triangle"></span>
+						</li>
+						<li>
+							七海投资战略
+							<span class="triangle"></span>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-9 right">
+					<p class="cnt">
+						1据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出” <br>会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金
+					</p>
+					<p class="cnt">
+						2据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出” <br>会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金
+					</p>
+					<p class="cnt">
+						3据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出” <br>会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金
+					</p>
+					<p class="cnt">
+						4据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出” <br>会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金
+					</p>
+					<p class="cnt">
+						5据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出” <br>会“NPRTS”签署协议会“NPRTS”签署协议-“日出”据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="foot">@Copyright 2016 七海资本</div>
+</body>
+<script type="text/javascript">
+	$('.container .right .back_btn').hover(function(){
+		$(this).children('.layer_black').stop().show();
+	},function(){
+		$(this).children('.layer_black').stop().hide();
+	})
+	$('.container .tab .left ul li').click(function(){
+		var _this = $(this);
+		$('.triangle').hide();
+		_this.find('.triangle').show();
+		var idx = _this.index();
+		$('.container .tab .cnt').hide();
+		$('.container .tab .cnt').eq(idx).show();
+
+	})
+</script>
+</html>

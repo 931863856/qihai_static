@@ -1,0 +1,179 @@
+<html>
+<head>
+	<title>价值主张</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/mycommon.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<style type="text/css">
+	html,body{
+		overflow-y: hidden;
+	}
+</style>
+<body>
+	<div class="contain_value">
+		<div class="banner">
+			<div class="banner_wrap">
+				<div class="title">七海资本</div>
+				<div class="instruction">专注投资和连接中美科技创新</div>
+				<a class="down_btn">
+					<span class="down_btn_layer"></span> 
+				</a>
+			</div>
+			<a class="go_back" href="index.html?1">
+				<img src="img/shouye3.png">
+				返回首页
+			</a>
+		</div>
+		<div class="content">
+			<div class="nav">
+				<div class="nav_wrap">
+					<div class="item">
+						<img src="img/shouye12.png">
+						<div class="tit">价值主张</div>
+					</div>
+					<div class="item">
+						<img src="img/shouye11.png">
+						<div class="tit">投资领域</div>
+					</div>
+					<div class="item">
+						<img src="img/shouye13.png">
+						<div class="tit">投资定位</div>
+					</div>
+					<div class="item">
+						<img src="img/shouye14.png">
+						<div class="tit">投资策略</div>
+					</div>
+				</div>
+			</div>
+			<div class="title">
+				专注投资和连接中美科技创新
+			</div>
+			<div class="content_list">
+				<div class="content_list_item">
+					<a>价值主张</a>
+					<div class="img_div">
+						<img src="img/person1.png">
+					</div>
+					<p>
+						据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”..
+					</p>
+				</div>
+				<div class="content_list_item">
+					<a>投资领域</a>
+					<div class="img_div">
+						<img src="img/person2.png">
+					</div>
+					<p>
+						据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”..
+					</p>
+				</div>
+				<div class="content_list_item">
+					<a>投资定位</a>
+					<div class="img_div">
+						<img src="img/person3.png">
+					</div>
+					<p>
+						据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”..
+					</p>
+				</div>
+				<div class="content_list_item">
+					<a>投资策略</a>
+					<div class="img_div">
+						<img src="img/person4.png">
+					</div>
+					<p>
+						据俄远东发展部网站6月17日消息,在第二十届圣彼得堡国际经济论坛期间,俄远东发展基金和俄金融市场参与者协会“NPRTS”签署协议会“NPRTS”签署协议-“日出”..
+					</p>
+				</div>
+			</div>
+			<footer>
+				<small>copyright 2016 七海资本</small>
+			</footer>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+// 滚轮监听并触发滑动方法
+	var is_finished = true;
+	var scrollFunc = function(e){
+		e.preventDefault();//阻止滚轮默认事件，使在触发滚轮时不跳产生页面抽搐一下的
+		if (is_finished){
+			e = e || window.event;
+		    if(e.wheelDelta<0){//all browser but Firefox
+		        scroll_btm();
+		    }else if(e.wheelDelta>0){
+		    	scroll_top();
+		    }
+		    else if(e.detail<0){//Firefox
+		        $('.down_btn').trigger('click');
+		    }
+		}	
+	}
+    // 注册滚轮事件
+	if(document.addEventListener){
+	    document.addEventListener('DOMMouseScroll',scrollFunc,false);
+	}
+	window.onmousewheel=document.onmousewheel=scrollFunc;
+
+// 向下滑方法
+	var scroll_btm=function(){
+		is_finished = false;
+		$(document.body).animate({
+			scrollTop:$('.content').offset().top
+		}, 1000);
+		setTimeout(function(){
+			is_finished = true;
+		},1000)
+	}
+
+// 向上滑方法
+	var scroll_top=function(){
+		is_finished = false;
+		$(document.body).animate({
+			scrollTop:0
+		}, 1000);
+		setTimeout(function(){
+			is_finished = true;
+		},1000)
+	}
+
+// 点击下一页按钮调用向下滑方法
+	$('.down_btn').click(function(){
+		scroll_btm();
+	})
+
+// 箭头下按钮hover
+	$('.down_btn').hover(function(){
+		$('.down_btn_layer').show();
+		$(this).children().addClass('down_btn_layer_hover');
+	},function(){
+		$('.down_btn_layer').hide();
+		$(this).children().removeClass('down_btn_layer_hover');
+	})
+	
+// li图片hover
+	$('.content_list_item').hover(function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).children('a').slideDown();
+	},function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).children('a').stop().slideUp();
+	})
+//跳转
+	$('.contain_value .content .content_list .content_list_item').click(function(){
+		location.href="page_value_detail.html";
+	})
+//子页返滑到底部
+	var is_scroll_btm = window.location.href.split('?')[1];
+	if (is_scroll_btm) {
+		scroll_btm();
+	}
+})
+</script>
+</html>

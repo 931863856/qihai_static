@@ -1,0 +1,313 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>七海资本</title>
+	<link rel="stylesheet" type="text/css" href="css/mycommon.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body onload="locate_to()">
+<div class="container">	
+<!-- 左侧 -->
+	<div class="left">
+		<div class="mask"></div>
+		<div class="line_list">
+			<div class="point_at"></div>
+			<div class="dot"></div>
+			<div class="dot">
+				<span></span>
+			</div>
+			<div class="dot">
+				<span></span>
+			</div>
+			<div class="dot">
+				<span></span>
+			</div>
+			<div class="dot">
+				<span></span>
+			</div>
+			<div class="dot">
+				<span></span>
+			</div>
+			<div class="dot">
+				<span></span>
+			</div>
+		</div>
+		<ul class="nav">
+			<li class="op1"><a>1. &nbsp;主页</a></li>
+			<li><a>2. &nbsp;关于我们</a></li>
+			<li><a>3. &nbsp;团队</a></li>
+			<li><a>4. &nbsp;投资组合</a></li>
+			<li><a>5. &nbsp;峰会</a></li>
+			<li><a>6. &nbsp;动态</a></li>
+			<li><a>7. &nbsp;联系我们</a></li>
+		</ul>
+	</div>
+<!-- 右侧 -->
+	<div class="right">
+		<ul>
+			<li>
+				<div class="inner_box">
+					<div class="tit">七海资本</div>
+					<span>价</span>
+					<span>值</span>
+					<span>主</span>
+					<span>张</span>
+					<p class="ct">
+						　新安晚报 安徽网讯6月18日晚起，宿松县遭受特大暴雨袭击超历史记载最大值...
+					</p>
+					<a class="more" href="page_value.html">
+						了解更多
+						<div class="effect"></div>
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="inner_box">
+					<div class="tit">七海资本</div>
+					<span>关</span>
+					<span>于</span>
+					<span>我</span>
+					<span>们</span>
+					<p class="ct">
+						　新安晚报 安徽网讯6月18日晚起，宿松县遭受特大暴雨袭击超历史记载最大值...
+					</p>
+					<a class="more" href="page_aboutus.html">
+						了解更多
+						<div class="effect"></div>
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="inner_box">
+					<div class="tit">七海资本</div>
+					<span>团</span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<span>队</span>
+					<p class="ct">
+						　新安晚报 安徽网讯6月18日晚起，宿松县遭受特大暴雨袭击超历史记载最大值...
+					</p>
+					<a class="more" href="page_team.html">
+						了解更多
+						<div class="effect"></div>
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="inner_box">
+					<div class="tit">七海资本</div>
+					<span>投</span>
+					<span>资</span>
+					<span>组</span>
+					<span>合</span>
+					<p class="ct">
+						　新安晚报 安徽网讯6月18日晚起，宿松县遭受特大暴雨袭击超历史记载最大值...
+					</p>
+					<a class="more" href="page_invest.html">
+						了解更多
+						<div class="effect"></div>
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="inner_box">
+					<div class="tit">七海资本</div>
+					<span>峰</span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<span>会</span>
+					<p class="ct">
+						　新安晚报 安徽网讯6月18日晚起，宿松县遭受特大暴雨袭击超历史记载最大值...
+					</p>
+					<a class="more" href="page_fenghui.html">
+						了解更多
+						<div class="effect"></div>
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="inner_box">
+					<div class="tit">七海资本</div>
+					<span>动</span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<span>态</span>
+					<p class="ct">
+						　新安晚报 安徽网讯6月18日晚起，宿松县遭受特大暴雨袭击超历史记载最大值...
+					</p>
+					<a class="more" href="page_news.html">
+						了解更多
+						<div class="effect"></div>
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="inner_box">
+					<div class="tit">七海资本</div>
+					<span>联</span>
+					<span>系</span>
+					<span>我</span>
+					<span>们</span>
+					<p class="ct">
+						　新安晚报 安徽网讯6月18日晚起，宿松县遭受特大暴雨袭击超历史记载最大值...
+					</p>
+					<a class="more" href="page_contact.html">
+						了解更多
+						<div class="effect"></div>
+					</a>
+				</div>
+			</li>
+		</ul>
+		<div class="switch_en">English</div>
+	</div>
+	<!-- 七logo层 -->
+	<div class="logo">
+		<img src="img/logoqihai.png">
+	</div>
+	<p class="index_title">专注投资和链接中美科技创新</p>
+	<!-- 按钮层 -->
+	<div class="arrow_next">
+		<div class="spread_layer"></div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+var click_nav;
+var wheel_index = 1;
+$(function(){
+//全局变量
+	var temp=58;
+	var _top = -100;
+ 	var is_finished = true;
+	var page_index = 1;
+
+// 滚轮监听并触发点击事件
+	var scrollFunc=function(e){
+		if (is_finished){
+			e=e || window.event;
+		    if(e.wheelDelta<0){//all browser but Firefox
+
+	    		if (wheel_index<7){
+					wheel_index++;
+				}else{
+					wheel_index = 1; 
+				}
+		    	click_nav(wheel_index);
+
+		    }else if(e.detail<0){//Firefox
+		        $('.arrow_next').trigger('click');
+		    }
+		}	
+	}
+    // 注册滚轮事件
+	if(document.addEventListener){
+	    document.addEventListener('DOMMouseScroll',scrollFunc,false);
+	}
+	window.onmousewheel=document.onmousewheel=scrollFunc;
+
+
+	 click_nav = function click_nav(pid){
+		is_finished = false;
+		console.log("__"+pid);
+		if(typeof(pid) == "undefined"){
+			pid = 1;
+		}
+			// 设置左侧透明块滑动
+			$('.mask').addClass("mask_go");
+			setTimeout(function(){
+				$('.mask').removeClass('mask_go');
+			},800)
+
+			//改变左侧透明块的颜色
+			var bg_arr_opblock = ['#008ED0','#3C7EB5','#643ADD','#2079B6','#ECECEC','#EE7A30','#0095DA'];
+			$('.container .left .mask').css({
+				'background-color':bg_arr_opblock[pid-1]
+			})
+			// 更改首页背景图
+			var bg_index = 2*(pid-1)+1;
+			var Url='url(img/qihai'+bg_index+'.jpg)';
+			$('.container').css({
+				'background-image':Url,
+				'background-size':'cover'
+			})
+			// 点滑动
+			$('.point_at').stop().animate({
+				'top':temp*(pid-1)+'px'
+			})
+			// 尾巴滑动
+			$('.container .left .nav li').removeClass('op1').eq(pid-1).addClass('op1');
+			$('.container .left .line_list .dot span').removeClass('dot_tail');
+			$('.container .left .line_list .dot span').eq(pid-2).addClass('dot_tail');
+			//改变当前下一页按钮颜色
+			var bg_arr_btn = ['#008ED0','#3C7EB5','#643ADD','#2079B6','#ECECEC','#EE7A30','#0095DA'];
+			$('.arrow_next').stop().css({
+				'background-color':bg_arr_btn[pid-1]
+			})
+
+			//右侧滑动
+	    	$('.right ul').stop().animate({
+	    		'top':_top*(pid-1)+'%'
+	    	},600) 
+	    	var idx = _top*(pid-1)/(-100);
+	    	if(_top==-700){
+	    		_top=0;
+	    	}
+			$('.right ul .inner_box').removeClass('right_nowpage');
+			$('.right ul .inner_box').eq(idx).addClass('right_nowpage');
+			$('.right_nowpage span').each(function(i){
+				var _this = $(this);
+				_this.addClass('fade_text'+i);
+			})
+			setTimeout(function(){
+				is_finished = true;
+			},1000)
+
+			page_index = pid;
+		}
+	
+
+	$('.arrow_next').click(function(){
+        wheel_index = page_index;
+		if(wheel_index<7){
+			wheel_index++;
+			click_nav(wheel_index);
+		}else{
+			wheel_index = 1;
+			click_nav(wheel_index);
+		}
+	})
+
+	$('.container .left .nav li').click(function(){
+		page_index = $(this).index()+1;
+		click_nav(page_index);
+		wheel_index = page_index;
+	})
+
+// 按钮hover
+	$('.more').hover(function(){
+		$('.more .effect').show();
+	},function(){
+		$('.more .effect').hide();
+	})
+
+	$('.arrow_next').hover(function(){
+		$(this).children().addClass('hover');
+	},function(){
+		$(this).children().removeClass('hover');
+	})
+
+
+})
+
+//子页面回退时，定位到对应的导航
+var _getUrl = window.location.href;
+function locate_to(){
+	var pid = _getUrl.split('?')[1];
+	if(typeof(pid) != "undefined"){
+		click_nav(pid);
+		wheel_index = pid;
+		$('.logo').css({
+			'-webkit-animation':'inherit',
+			'-moz-animation':'inherit',
+			'animation':'inherit'
+		})
+	}
+};
+</script>
+</html>

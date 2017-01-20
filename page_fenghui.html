@@ -1,0 +1,930 @@
+<html>
+<head>
+	<title>峰会</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome-3.2.1/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!--[if lte IE 9 ]> <style type="text/css">html,body{height: 100%;}</style> <![endif]-->
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		font-family: Microsoft YaHei;
+		list-style: none;
+		text-decoration: none;
+		letter-spacing: 2px;
+	    -webkit-font-smoothing: antialiased;
+  		-moz-osx-font-smoothing: grayscale;
+	}
+	body{
+		overflow-y:hidden;
+	}
+	.home{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background: #000;
+		background: url(img/banner_fh.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.home_child{
+		position: relative;
+		width: 100%;
+	}
+	.home .container{
+		height: 100%;
+	}
+	.home .container .row_back {
+		margin-top: 10%;
+	}
+	.home .container .row_back .back_btn{
+	    font-size: 0.875rem;
+	    border: 1px solid #999;
+	    color: #999;
+	    letter-spacing: 2px;
+	    border-radius: 2px;
+	    -webkit-border-radius: 2px;
+	    -moz-border-radius: 2px;
+	    padding: 7px 30px;
+	    float: right;
+	}
+	.home .container h2{
+		position: relative;
+		margin-top: 6%;
+		text-align: center;
+		font-weight: bold;
+		color: #666;
+		font-size:2.5rem;
+	}
+	.home .container h2:after{
+	    content: "";
+	    position: absolute;
+	    width: 5rem;
+	    height: 2px;
+	    background: #75D1F1;
+	    top: 4.5rem;
+	    left: 50%;
+	    margin-left: -2.5rem;
+	}
+	.home .container p{
+		text-align: center;
+		margin-top: 5%;
+		color: #999;
+		letter-spacing: 3px;
+		font-size: 1rem;
+	}
+	.home .container .row_detail{
+		margin-top: 26%;
+		text-align: center;
+	}
+	.home .container .row_detail .detail{
+		display: inline-block;
+	    font-size: 1.1rem;
+	    border: 1px solid #75D1F1;
+	    color: #75D1F1;
+	    letter-spacing: 2px;
+	    border-radius: 2px;
+	    -webkit-border-radius: 2px;
+	    -moz-border-radius: 2px;
+        padding: 10px 60px;
+	}
+
+	@media screen and (max-width: 768px) {
+		.home .container .row_back{
+			margin-top: 20%;
+		}
+		.home .container .row_detail {
+		    margin-top: 55%;
+		}
+		.home .container h2{
+			margin-top: 18%
+		}
+		.home .container p{
+			margin-top: 9%;
+		}
+		.home .container h2:after{
+			top: 150%;
+		}
+	}
+	@media screen and (min-width:  768px) and (max-width: 992px){
+
+		.home .container .row_back{
+			margin-top: 15%;
+		}
+		.home .container h2{
+			margin-top: 12%
+		}
+		.home .container .row_detail {
+		    margin-top: 42%;
+		}
+		.home .container p{
+			margin-top: 7%;
+		}
+		.home .container h2:after{
+			top: 150%;
+		}
+	}
+	/*@media screen and (min-width: 992px) and (max-width: 1200px){
+		html{
+			font-size: 12px;
+		}
+		.home .container .row_back{
+			margin-top: 10%; 
+		}
+		.home .container h2 {
+		    margin-top: 12%;
+		}
+		.home .container .row_detail {
+		    margin-top: 32%;
+		}
+		.home .container h2:after{
+			top: 150%;
+		}
+	}*/
+	@media screen and (min-width: 1024px) and (max-width: 1366px) and (height: 768px){
+			html{
+				font-size: 12px;
+			}
+			.home .container .row_back{
+				margin-top: 10%; 
+			}
+			.home .container h2 {
+			    margin-top: 7%;
+			}
+			.home .container .row_detail {
+			    margin-top: 28%;
+			}
+	}
+
+	.dotList{
+		position: absolute;
+		height: 200px;
+		top: 50%;
+		left: 5%;
+		margin-top: -100px;
+		z-index: 2;
+	}
+	.dotList li{
+		display: block;
+		height: 15px;
+		width: 15px;
+		border:1px solid #75D1F1;
+		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		margin-top: 31px;
+		padding: 0;
+		cursor: pointer;
+	}
+	.dotList li.active{
+		background: #75D1F1;
+	}
+	.dotList li:nth-of-type(1){
+		margin-top: 0;
+	}
+	.dotList li.reverse{
+		border:1px solid #fff;
+	}
+	.dotList li.active_reverse{
+		background: #fff;
+	}
+	.p1{
+		position: relative;
+		padding-bottom: 10rem;
+	}
+	.p1 .row.nav{
+		background: #75D1F1;
+		height: 7.5rem;	
+		margin: 0;
+		overflow: hidden;
+	}
+	.p1 .row.nav li{
+		text-align: center;
+		font-size: 1.5rem;
+		font-weight: bold;
+		line-height:7.5rem;
+		letter-spacing: 2px;
+		text-indent: 2px;
+		color: #fff;
+	}
+	.p1 .row.nav li.on{
+		background: #fff;
+		color: #75D1F1;
+	}
+	.p1 .title{
+		text-align: center;
+		font-size: 1.5rem;
+		color: #75D1F1;
+		font-weight: bold;
+		margin-top: 4%;
+		letter-spacing: 2px;
+	}
+	.p1 .time{
+		text-align: center;
+		font-size: 1.2rem;
+		color: #75D1F1;
+		margin-top: 0.5%;
+		letter-spacing: 2px;
+	}
+	.p1 .container .row .ct_block{
+		margin-top: 5rem;
+		padding: 0 2rem;
+		cursor: pointer;
+	}
+	.p1 .container .row img{
+		width: 100%;
+	}
+	.p1 .container .row .ct_block_tit{
+		font-size: 1.1rem;
+		color: #666;
+		font-weight: bold;
+		letter-spacing: 2px;
+		padding: 1rem 0;
+	}
+	.p1 .container .row .ct_block_time{
+		font-size: 1.1rem;
+		letter-spacing: 2px;
+		padding: 0 0 1rem;
+		color: #999;
+		border-bottom: 1px solid #75D1F1;
+	}
+
+	.p2{
+		position: relative;
+		background: #75D1F1;
+		padding-bottom: 10rem;
+	}
+	.p2 .title{
+		text-align: center;
+		font-size: 1.5rem;
+		color: #fff;
+		font-weight: bold;
+		letter-spacing: 2px;
+		padding-top: 10rem;
+	}
+	.p2 .time{
+		text-align: center;
+		font-size: 1.2rem;
+		color: #fff;
+		letter-spacing: 2px;
+		margin-top: 1rem;
+	}
+	.p2 .container{
+		color: #fff;
+	}
+	.p2 .container .row .gy_block{
+		margin-top: 5rem;
+		padding: 0 2rem;
+	}
+	.p2 .container .row .gy_block img{
+		width: 100%;
+	}
+	.p2 .container .row .gy_block .gy_block_time{
+		font-size: 1.1rem;
+		letter-spacing: 2px;
+		padding: 1.2rem 0 0.6rem;
+		border-bottom:1px solid #fff; 
+	}
+	.p2 .container .row .gy_block .gy_block_tit{
+		font-size: 1.1rem;
+		letter-spacing: 2px;
+		padding: 0.6rem 0 0 0;
+		font-weight: bold;
+	}
+	.p2 .arrow_down{
+		position: absolute;
+		width: 5rem;
+		height: 5rem;
+		top: -2.5rem;
+		left: 50%;
+		margin-left: -1.25rem;
+		background-color: #75D1F1;
+		background-image: url(img/jiantouxia.png);
+		background-repeat:  no-repeat;
+		background-position: center;
+		background-size: 50%;
+		border-radius: 50%;
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+	}
+	.p3{
+		position: relative;
+	}
+	.p3 .title{
+		background-color: #fcfcfc;
+		text-align: center;
+		font-size: 1.5rem;
+		color: #75D1F1;
+		font-weight: bold;
+		letter-spacing: 2px;
+		padding-top: 3rem;
+	}
+	.p3 .time{
+		background-color: #fcfcfc;
+		text-align: center;
+		font-size: 1.2rem;
+		color: #75D1F1;
+		letter-spacing: 2px;
+		padding-bottom: 2.5rem;
+	}
+	.p3 .container{
+		padding-top: 5rem;
+	}
+	.p3 .wlw_block{
+		min-height: 25rem;
+	}
+	.p3 .wlw_block .img_wrap{
+		position: relative;
+	}
+	.p3 .wlw_block .img_wrap img{
+		width: 100%;
+	}
+	.p3 .wlw_block .img_wrap .txt_bg{
+		position: absolute;
+		width: 100%;
+		height: 50%;
+		background:rgba(123, 192, 216, 0.5);
+		left: 0;
+		bottom:0;
+		padding: 1.5rem 3rem;
+		color: #fff;
+		font-size: 1.2rem;
+		font-weight: bold;
+		text-align: center;
+	}
+	.p3 .wlw_block .wlw_block_yjjb{
+		font-size: 0.8rem;
+		color: #666;
+		padding: 1rem 0 0.4rem 1rem;
+		letter-spacing: 2px;
+	}
+	.p3 .wlw_block .wlw_block_name{
+		font-size: 1.3rem;
+		color: #999;
+		padding-left: 1rem;
+		letter-spacing: 2px;
+	}
+	.p3 .wlw_block .wlw_block_time{
+		color: #ddd;
+		padding: 1.5rem 0 0 1rem;
+	}
+
+	.p4{
+		position: relative;
+		background: #75D1F1;
+		padding-top: 5rem;
+		padding-bottom: 10rem;
+	}
+	.p4 .head{
+		position: relative;
+		width: 25rem;
+		height: 4.6rem;
+		margin: 0 auto 8rem;
+		background: #fff;
+		text-align: center;
+		border-bottom: 4px solid #65AEC7;
+	}
+	.p4 .head .triangle{
+		position: absolute;
+		border-left: 2rem solid #75D1F1;
+		border-top: 1.2rem solid transparent;
+		border-bottom: 1.2rem solid transparent;
+		top: 1rem;
+	}
+	.p4 .head .triangle:nth-of-type(2){
+		right:0;
+		transform:rotate(180deg);
+		-moz-transform:rotate(180deg);
+		-webkit-transform:rotate(180deg);
+	}
+	.p4 .head .title{
+		color: #75D1F1;
+		font-size: 1.5rem;
+		letter-spacing: 2px;
+		font-weight: bold;
+	}
+	.p4 .head .time{
+		color: #75D1F1;
+		font-size: 1.2rem;
+		letter-spacing: 2px;
+	}
+	.p4 .cyl_block{
+		padding: 0 2rem 0;
+	}
+	
+	.p4 .cyl_block img{
+		width: 100%;
+	}
+	.p4 .cyl_block .tempwrap{
+	    position: absolute;
+	    width:calc(100% - 4rem);
+	    width:-moz-calc(100% - 4rem);
+	    width:-webkit-calc(100% - 4rem);
+	    bottom: 0;
+	    padding:1rem 2rem;
+	}
+	.p4 .cyl_block .tempwrap:before{
+		content: "";
+		position: absolute;
+		width: 4rem;
+		height: 0;
+		border: 1px solid #75D1F1;
+		top: 0;
+		left: 2rem;
+
+	}
+	.p4 .cyl_block .tempwrap .cyl_block_tit{
+		font-size: 1.1rem;
+		color: #999;
+		font-weight: bold;
+	}
+	.p4 .cyl_block .tempwrap .cyl_block_name{
+		font-size: 1rem;
+		color: #ccc;
+		padding: 0.5rem 0;
+		
+	}
+	.p4 .cyl_block .tempwrap .cyl_block_time{
+		font-size: 1rem;
+		color: #ddd;
+	}
+	.p4 .foot{
+		position: absolute;
+		bottom: 0;
+		padding:0.48rem 0; 
+		width: 100%;
+		background: #fcfcfc;
+		text-align: center;
+		font-size: 0.8rem;
+		letter-spacing: 2px;
+		color: #999;
+	}
+	#mask .modal-dialog{
+		width: 50%;
+	}
+	#mask .modal-header{
+		padding-left: 25px;
+		padding-right: 25px;
+		color: #75D1F1;
+	}
+	#mask .modal-body{
+		padding: 25px;
+	}
+	#huise {
+		display: none;
+	    margin: auto;
+	    width: 100%;
+	    height: 100%;
+	    text-align: center;
+	    background-color: rgba(0,0,0,0.6);
+	    position: fixed;
+	    top: 0px;
+	    z-index: 300;
+	}
+	.videobox {
+        position: absolute;
+	    background: #fff;
+	    padding: 15px;
+	    left: 50%;
+	    margin-left: -255px;
+	    top: 20%;
+	}
+	.btn_close {
+        position: absolute;
+	    top: 20%;
+	    left: 50%;
+	    margin-left: 255px;
+	    width: 40px;
+	    height: 40px;
+	    background: url(img/video-close.png) no-repeat left center;
+	}
+	.btn_close a {
+        display: inline-block;
+	    height: 100%;
+	    width: 100%;
+	}
+</style>
+<body>
+	<div class="home index ">
+		<div class="container">
+			<div class="row row_back">
+				<a href="index.html?5" class="btn btn-default back_btn">返回上一页</a>
+			</div>
+			<h2>峰&nbsp;&nbsp;会</h2>
+			<p>2014 IDEAS 互联网和物联网跨界峰会</p>
+			<div class="row row_detail">
+				<div class="btn bt-default detail" data-toggle="modal" data-target="#mask">查看详情</div>
+			</div>
+		</div>
+		<ul class="dotList">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="home_child index p1">
+		<ul class="row nav">
+			<li class="col-md-2 col-md-offset-2 on">互联网的未来</li>
+			<li class="col-md-2">工业4.0</li>
+			<li class="col-md-2">物联网生活</li>
+			<li class="col-md-2">物联网产业生态链</li>
+		</ul>
+		<div class="title">互联网的未来</div>
+		<div class="time">(9:00~10:30)</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 ct_block">
+					<img src="img/qihai92.png">
+					<div class="ct_block_tit">主办方致辞（视频）</div>
+					<div class="ct_block_time">9:10~9:30</div>
+				</div>
+				<div class="col-md-4 ct_block">
+					<img src="img/qihai93.png">
+					<div class="ct_block_tit">主题演讲：物联网与人联网（视频）</div>
+					<div class="ct_block_time">9:30~10:00</div>
+				</div>
+				<div class="col-md-4 ct_block">
+					<img src="img/qihai94.png">
+					<div class="ct_block_tit">主题演讲：物联网与新能源（视频）</div>
+					<div class="ct_block_time">10:00~10:30</div>
+				</div>
+			</div>
+		</div>
+		<ul class="dotList">
+			<li></li>
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="home_child index p2">
+		<div class="title">工业4.0</div>
+		<div class="time">(10:10~12:30)</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 gy_block">
+					<img src="img/qihai95.png">
+					<div class="gy_block_time">10:55~10:15</div>
+					<div class="gy_block_tit">主题演讲：未来无所不能（视频）</div>
+				</div>
+				<div class="col-md-3 gy_block">
+					<img src="img/qihai96.png">
+					<div class="gy_block_time">10:55~10:15</div>
+					<div class="gy_block_tit">主题演讲：未来无所不能（视频）</div>
+				</div>
+				<div class="col-md-3 gy_block">
+					<img src="img/qihai97.png">
+					<div class="gy_block_time">10:55~10:15</div>
+					<div class="gy_block_tit">主题演讲：未来无所不能（视频）</div>
+				</div>
+				<div class="col-md-3 gy_block">
+					<img src="img/qihai98.png">
+					<div class="gy_block_time">10:55~10:15</div>
+					<div class="gy_block_tit">主题演讲：未来无所不能（视频）</div>
+				</div>
+			</div>
+		</div>
+		<div class="arrow_down"></div>
+		<ul class="dotList">
+			<li class="reverse"></li>
+			<li class="reverse"></li>
+			<li class="reverse active_reverse"></li>
+			<li class="reverse"></li>
+			<li class="reverse"></li>
+		</ul>
+	</div>
+	<div class="home_child index p3">
+		<div class="title">物联网生活</div>
+		<div class="time">（13:30~15:20）</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 wlw_block">
+					<div class=" img_wrap">
+						<img src="img/qihai99.png">
+						<div class="txt_bg">人体：下一代联网设备(profUSA)(视频)</div>
+					</div>
+					<div class="wlw_block_yjjb">演讲嘉宾</div>
+					<div class="wlw_block_name">Ben Hwang 创始人兼CEO</div>
+					<div class="wlw_block_time">13:40~13:55</div>
+				</div>
+				<div class="col-md-4 wlw_block">
+					<div class="img_wrap">
+						<img src="img/qihai910.png">
+						<div class="txt_bg">人体：下一代联网设备(profUSA)(视频)</div>
+					</div>
+					<div class="wlw_block_yjjb">演讲嘉宾</div>
+					<div class="wlw_block_name">Ben Hwang 创始人兼CEO</div>
+					<div class="wlw_block_time">13:40~13:55</div>
+				</div>
+				<div class="col-md-4 wlw_block">
+					<div class="img_wrap">
+						<img src="img/qihai911.png">
+						<div class="txt_bg">人体：下一代联网设备(profUSA)(视频)</div>
+					</div>
+					<div class="wlw_block_yjjb">演讲嘉宾</div>
+					<div class="wlw_block_name">Ben Hwang 创始人兼CEO</div>
+					<div class="wlw_block_time">13:40~13:55</div>
+				</div>
+				<div class="col-md-4 wlw_block">
+					<div class="img_wrap">
+						<img src="img/qihai912.png">
+						<div class="txt_bg">人体：下一代联网设备(profUSA)(视频)</div>
+					</div>
+					<div class="wlw_block_yjjb">演讲嘉宾</div>
+					<div class="wlw_block_name">Ben Hwang 创始人兼CEO</div>
+					<div class="wlw_block_time">13:40~13:55</div>
+				</div>
+				<div class="col-md-4 wlw_block">
+					<div class="img_wrap">
+						<img src="img/qihai912.png">
+						<div class="txt_bg">人体：下一代联网设备(profUSA)(视频)</div>
+					</div>
+					<div class="wlw_block_yjjb">演讲嘉宾</div>
+					<div class="wlw_block_name">Ben Hwang 创始人兼CEO</div>
+					<div class="wlw_block_time">13:40~13:55</div>
+				</div>
+			</div>
+		</div>
+		<ul class="dotList">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li class="active"></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="home_child index p4">
+		<div class="head">
+			<div class="triangle"></div>
+			<div class="triangle"></div>
+			<div class="title">物联网产业生态链</div>
+			<div class="time">（15:30~17:00）</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 cyl_block">
+					<img src="img/qihai913.png">
+					<div class="tempwrap">
+						<div class="cyl_block_tit">人人都可以做物联网（视频）</div>
+						<div class="cyl_block_name">Ben Hwang 创始人兼CEO</div>
+						<div class="cyl_block_time">13:40~13:55</div>
+					</div>
+				</div>
+				<div class="col-md-4 cyl_block">
+					<img src="img/qihai914.png">
+					<div class="tempwrap">
+						<div class="cyl_block_tit">主题演讲：以物联网抢跑供应链（视频）</div>
+						<div class="cyl_block_name">Ben Hwang 创始人兼CEO</div>
+						<div class="cyl_block_time">13:40~13:55</div>
+					</div>
+				</div>
+				<div class="col-md-4 cyl_block">
+					<img src="img/qihai915.png">
+					<div class="tempwrap">
+						<div class="cyl_block_tit">讨论3：硬蛋大赛及硬件产业生态链 主持人 吴爱爱（ARM中国总经理）</div>
+						<div class="cyl_block_name">Ben Hwang 创始人兼CEO</div>
+						<div class="cyl_block_time">13:40~13:55</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="foot">@Copyright 2016 七海资本</div>
+		<ul class="dotList">
+			<li class="reverse"></li>
+			<li class="reverse"></li>
+			<li class="reverse"></li>
+			<li class="reverse"></li>
+			<li class="reverse active_reverse"></li>
+		</ul>
+	</div>
+	
+	<div class="modal fade" id="mask" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			 <div class="modal-header">
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+			          &times;
+			    </button>
+			    <h4 class="modal-title" id="myModalLabel">
+			       详情：
+			    </h4>
+			 </div>
+			 <div class="modal-body">
+			    session 1<br>	
+				互联网的未来<br>
+				9:00-10:30&nbsp;&nbsp;9:10-9:30&nbsp;&nbsp;&nbsp;主办方致辞(视频)&nbsp;&nbsp;&nbsp;熊明华 , 康均为<br>
+				峰会联席主席 <br>
+				9:30-10:00&nbsp;&nbsp;主题演讲：物联网与人联网(视频)&nbsp;&nbsp;&nbsp;Mike Muller <br>
+				(ARM 创始人兼CTO) <br>
+				10:00-10:30&nbsp;&nbsp;主题演讲：物联网与新能源(视频)&nbsp;&nbsp;&nbsp;张雷 <br>
+				远景能源CEO <br>
+				session 2<br>
+				工业4.0 <br>
+				10:45-12:30&nbsp;&nbsp;10:55-11:15&nbsp;&nbsp;主题演讲：未来无所不能(视频)&nbsp;&nbsp;&nbsp;汪滔 <br>
+				大疆科技 <br>
+				11:15-11:35&nbsp;&nbsp;智能机械手：再轻再薄再快也不怕(Grabit)(视频)&nbsp;&nbsp;harsha plahld <br>
+				Grabit 联合创始人兼 CTO <br>
+				session 1<br>	
+				互联网的未来<br>
+				9:00-10:30&nbsp;&nbsp;9:10-9:30&nbsp;&nbsp;&nbsp;主办方致辞(视频)&nbsp;&nbsp;&nbsp;熊明华 , 康均为<br>
+				峰会联席主席 <br>
+				9:30-10:00&nbsp;&nbsp;主题演讲：物联网与人联网(视频)&nbsp;&nbsp;&nbsp;Mike Muller <br>
+				(ARM 创始人兼CTO) <br>
+				10:00-10:30&nbsp;&nbsp;主题演讲：物联网与新能源(视频)&nbsp;&nbsp;&nbsp;张雷 <br>
+				远景能源CEO <br>
+				session 2<br>
+				工业4.0 <br>
+				10:45-12:30&nbsp;&nbsp;10:55-11:15&nbsp;&nbsp;主题演讲：未来无所不能(视频)&nbsp;&nbsp;&nbsp;汪滔 <br>
+				大疆科技 <br>
+				11:15-11:35&nbsp;&nbsp;智能机械手：再轻再薄再快也不怕(Grabit)(视频)&nbsp;&nbsp;harsha plahld <br>
+				Grabit 联合创始人兼 CTO
+			 </div>
+			 <div class="modal-footer">
+			    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			 </div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	<div id="huise">
+		 <div class="videobox">
+            <div id="videoembed">
+            	<embed src="http://player.youku.com/player.php/sid/XMTQ0Mzk1NTQ2NA==/v.swf" allowfullscreen="true" quality="high" width="480" height="400" align="middle"  allowscriptaccess="always" type="application/x-shockwave-flash">
+        	</div>
+  	 	</div>
+		<div class="btn_close">
+		 	<a href="javascript:void();" id="close-btn"></a>
+		</div>  
+	</div>
+</body>
+
+<script type="text/javascript">
+$(function(){
+	var li_idx,page_idx,wheel_id=0;
+	var is_finished = true;
+// 页面滚动
+	var scrollFunc = function(e){
+		var e = event || window.event; 
+		e.preventDefault();
+		if(is_finished){
+			if(e.wheelDelta<0){
+				if(typeof(li_idx) == "undefined"){//直接是滚动事件开始的
+					if(wheel_id<4){
+						page_idx = wheel_id;
+						scroll_nextP();
+					}
+				}else{							//滚动前一次事件是点击事件
+					if(li_idx!=4){
+						page_idx = li_idx;      //滚动事件引用点击事件的上次点击li索引
+						li_idx++;
+						scroll_nextP();
+					}				  
+				}
+			}else if(e.wheelDelta>0){
+				if(typeof(li_idx) == "undefined"){
+					if(wheel_id>0){
+						page_idx = wheel_id;
+						scroll_lastP();
+					}
+				}else{							//滚动前一次事件是点击事件
+					if(li_idx!=0){
+						page_idx = li_idx;      //滚动事件引用点击事件的上次点击li索引
+						li_idx--;
+						scroll_lastP();
+					}				  
+				}
+			}
+		}
+	}
+
+//滚动触发的事件函数 
+	function scroll_nextP(){
+		is_finished = false;
+		page_idx++;
+		wheel_id++;
+		console.log("-->"+page_idx);
+		var page_offset_top = $('.index').eq(page_idx).offset().top;
+		$(document.body).animate({
+			scrollTop:page_offset_top
+		},1000)
+		
+		setTimeout(function(){
+			is_finished = true;
+		},1000)
+	}
+	function scroll_lastP(){
+		is_finished = false;
+		page_idx--;
+			
+		wheel_id--;
+		console.log("-->"+page_idx);
+		var page_offset_top = $('.index').eq(page_idx).offset().top;
+		$(document.body).animate({
+			scrollTop:page_offset_top
+		},1000)
+		
+		setTimeout(function(){
+			is_finished = true;
+		},1000)
+	}
+
+// 注册滚轮事件方法
+	function regist_mousewheel(){
+		//非IE 
+		if(document.addEventListener && !document.attachEvent) 
+		{ 
+			document.addEventListener('mousewheel',scrollFunc); 
+			//FF绑定滚动事件 
+			document.addEventListener('DOMMouseScroll',scrollFunc); 
+		} 
+		//IE
+		else if(document.attachEvent && !document.addEventListener){ 
+			document.attachEvent('onmousewheel',scrollFunc); 
+		}else{ 
+			window.onmousewheel = scrollFunc; 
+		}
+	}
+
+// 注销滚轮事件方法
+	function concel_mousewheel(){
+		//非IE 
+		if(document.removeEventListener && !document.detachEvent) 
+		{ 
+			document.removeEventListener('mousewheel',scrollFunc); 
+			//FF绑定滚动事件 
+			document.removeEventListener('DOMMouseScroll',scrollFunc); 
+		} 
+		//IE
+		else if(document.detachEvent && !document.removeEventListener){ 
+			document.attachEvent('onmousewheel',scrollFunc); 
+		}else{ 
+			window.onmousewheel = ""; 
+		}
+	}
+
+ 	regist_mousewheel();
+
+//点击dotlist滑动页面 
+	$('.dotList li').click(function(){
+		li_idx = $(this).index();
+		var index = $(this).index();
+		var this_offset_top = $('.index').eq(index).offset().top;
+		$(document.body).animate({
+			scrollTop:this_offset_top
+		},1000)
+	})
+
+//页面刷新置顶
+	$(document.body).animate({
+		scrollTop:0
+	},500)
+
+// 弹出详情遮罩层
+	$('.home .container .row_detail .detail').click(function(){
+		concel_mousewheel();
+	})
+
+// 退出详情遮罩层
+	$('#mask .close').click(function(){
+		regist_mousewheel();
+	})
+	$('#mask .modal-footer .btn').click(function(){
+		regist_mousewheel();
+	})
+
+//点击进入视频遮罩
+	$('.p1 .container .row .ct_block').on('click',function(){
+		$('#huise').show();
+		$('.p1 .title').css({
+			opacity:'0'
+		})
+		$('.p1 .container .row .ct_block').css({
+			opacity:'0'
+		})
+		concel_mousewheel();
+	})
+
+//点击退出视频遮罩
+	$('.btn_close a').click(function(){
+		$('#huise').fadeOut(200);
+		$('.p1 .title').css({
+			opacity:'1'
+		})
+		$('.p1 .container .row .ct_block').css({
+			opacity:'1'
+		})
+		regist_mousewheel();
+	})
+})
+</script>
+</html>

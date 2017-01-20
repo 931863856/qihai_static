@@ -1,0 +1,279 @@
+<html>
+<head>
+	<title>七海动态</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		font-family: Microsoft YaHei;
+		list-style: none;
+		text-decoration: none;
+		letter-spacing: 2px;
+	    -webkit-font-smoothing: antialiased;
+  		-moz-osx-font-smoothing: grayscale;
+	}
+	.main_news{
+		min-height: 96.5%;
+	}
+	.container .left{
+		margin-top: 10rem;
+	}
+	.container .left h2{
+	    color: #FF7B00;
+	    letter-spacing: 6px;
+	}
+	.container .left h4{
+		margin-top: 1.8rem;
+		color: #999;
+	    letter-spacing: 4px;
+	}
+	.container .left .left_list{
+		margin-top: 1.5rem;
+	}
+	.container .left .left_list .col-md-9{
+		padding-left: 0;
+	}
+	.container .left .left_list .img_bg{
+		height: 8rem;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: contain;
+	}
+	.container .left .left_list .wrap_click{
+		text-decoration: none;
+	}
+    .container .left .left_list .wrap_click .time_and_tit{
+    	background: #eee;
+    	color: #75D1F1;
+    	padding: 1.1rem;
+		height: 5rem;
+    }
+	.container .left .left_list .wrap_click .time_and_tit .time{
+		font-size: 0.9rem;
+		font-weight: bold;
+	}
+	.container .left .left_list .wrap_click .time_and_tit .tit{
+		font-size: 1rem;
+		font-weight: bold;
+	}
+	.container .left .left_list .wrap_click .txt{
+		font-size: 0.7rem;
+		height: 3rem;
+	    line-height: 1.5rem;
+	    color: #999;
+	    overflow: hidden;
+	}
+	.container .left .left_list .wrap_click .txt .more{
+		float: right;
+		color: #ccc;
+	}
+
+	.container .right{
+		margin-top: 9rem;
+
+	}
+	.container .right>.row{
+		margin: 0;
+	}
+	.container .right h4{
+		margin-top: 2.5rem;
+		color: #999;
+	    letter-spacing: 4px;
+	}
+    .container .right .back_btn{
+    	position: relative;
+    	float: right;
+		text-align: center;
+		color: #666;
+		font-size: 0.875rem;
+		border: 1px solid #666;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		height: 2.5rem;
+		line-height: 2.5rem;
+		width: 10rem;
+		right: 0;
+		overflow: hidden;
+	}
+	.container .right .back_btn .layer_black{
+		position:absolute;
+		display: none;
+		top: -5rem;
+		left:-1.25rem;
+		height:12.5rem;
+		width: 12.5rem;
+		border:1.25rem solid rgba(0,0,0,.8); 
+		border-radius: 50%;
+		-weibit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		animation:layer_black 0.5s;
+		-webkit-animation:layer_black 0.5s;
+		-moz-animation:layer_black 0.5s;
+	}
+	@-webkit-keyframes layer_black{
+		from{
+			top: 0;
+			left: 3.75rem;
+			height:0;
+			width: 0;
+		}
+		to{
+			top: -5rem;
+			left:-1.25rem;
+			height:12.5rem;
+			width: 12.5rem;
+		}
+	}@-moz-keyframes layer_black{
+		from{
+			top: 0;
+			left: 3.75rem;
+			height:0;
+			width: 0;
+		}
+		to{
+			top: -5rem;
+			left:-1.25rem;
+			height:12.5rem;
+			width: 12.5rem;
+		}
+	}@keyframes layer_black{
+		from{
+			top: 0;
+			left: 3.75rem;
+			height:0;
+			width: 0;
+		}
+		to{
+			top: -5rem;
+			left:-1.25rem;
+			height:12.5rem;
+			width: 12.5rem;
+		}
+	}
+	.container .right .right_list{
+		background: #eee;
+		margin-top: 2rem;
+	}
+	.container .right .right_list li{
+		padding: 0 2rem;
+		height: 3.5rem;
+		line-height: 3.5rem;
+		border-bottom: 1px solid #fff;
+		white-space:nowrap; 
+		overflow: hidden;
+		text-overflow:ellipsis;
+	}
+	.container .right .right_list li a{
+		color: #666;
+		text-decoration: none;
+	}
+	.container .right img{
+		width: 100%;
+	}
+	.foot{
+		padding:0.48rem 0; 
+		width: 100%;
+		background: #000;
+		text-align: center;
+		font-size: 0.8rem;
+		letter-spacing: 2px;
+		color:#999;
+	}
+</style>
+<body>
+	<div class="main_news">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 left">
+					<div class="row">
+						<div class="col-md-12">
+							<h2>七海动态</h1>
+							<h4>企业新闻</h3>
+						</div>
+					</div>
+					<div class="row left_list">
+						<a href="page_news_detail.html" class="wrap_click">
+							<div class="col-md-3">
+								<div class="img_bg" style="background-image: url(img/qihai81.png);"></div>
+							</div>
+							<div class="col-md-9">
+								<div class="time_and_tit">
+									<div class="time">2016-05-09</div>
+									<div class="tit">世界上最稳健的家庭资产配置</div>
+								</div>
+								<p class="txt">环球网报道 实习记者李越英语是世界上第二大语言，亦是欧盟机构的主要工作语言之一。据新加坡《联合早报》6月28日消息
+								<span class="more">了解详情>></span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="row left_list">
+						<a href="page_news_detail.html" class="wrap_click">
+							<div class="col-md-3">
+								<div class="img_bg" style="background-image: url(img/qihai82.png);"></div>
+							</div>
+							<div class="col-md-9">
+								<div class="time_and_tit">
+									<div class="time">2016-05-09</div>
+									<div class="tit">世界上最稳健的家庭资产配置</div>
+								</div>
+								<p class="txt">环球网报道 实习记者李越英语是世界上第二大语言，亦是欧盟机构的主要工作语言之一。据新加坡《联合早报》6月28日消息
+								<span class="more">了解详情>></span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="row left_list">
+						<a href="page_news_detail.html" class="wrap_click">
+							<div class="col-md-3">
+								<div class="img_bg" style="background-image: url(img/qihai83.png);"></div>
+							</div>
+							<div class="col-md-9">
+								<div class="time_and_tit">
+									<div class="time">2016-05-09</div>
+									<div class="tit">世界上最稳健的家庭资产配置</div>
+								</div>
+								<p class="txt">环球网报道 实习记者李越英语是世界上第二大语言，亦是欧盟机构的主要工作语言之一。据新加坡《联合早报》6月28日消息
+								<span class="more">了解详情>></span>
+								</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-5 right">
+					<div class="row">
+						<a href="index.html?6" class="back_btn">
+							返回上一页
+							<div class="layer_black"></div>
+						</a>
+					</div>
+					<h4>行业新闻</h4>
+					<ul class="right_list">
+						<li><a href="page_news_detail.html">十三五规划：新型地产将获较大增长空间</a></li>
+						<li><a href="page_news_detail.html">环球网报道 实习记者李越英语是</a></li>
+						<li><a href="page_news_detail.html">从一个潮流，两个对流，三个需求看文旅</a></li>
+						<li><a href="page_news_detail.html">十三五规划：新型地产将获较大增长空间</a></li>
+						<li><a href="page_news_detail.html">从一个潮流，两个对流，三个需求看文旅</a></li>
+						<li><a href="page_news_detail.html">亦是欧盟机构的主要工作语言之一较大增长空间</a></li>
+					</ul>	
+					<img src="img/qihai84.png">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="foot">@Copyright 2016 七海资本</div>
+</body>
+<script type="text/javascript">
+	$('.container .right .back_btn').hover(function(){
+		$(this).children('.layer_black').stop().show();
+	},function(){
+		$(this).children('.layer_black').stop().hide();
+	})
+</script>
+</html>
